@@ -34,6 +34,12 @@ if [[ -z ${upstream+x} ]]; then
   fetch origin "${upstream}"
 fi
 
+if [[ ${upstream} == "x" ]]; then
+  # in case pull_request base sha is not available
+  upstream="${GITHUB_REF#refs/heads/}"
+  fetch origin "${upstream}"
+fi
+
 save_annotations=${INPUT_SAVE_ANNOTATIONS}
 if [[ ${save_annotations} == "auto" && ${GITHUB_EVENT_PULL_REQUEST_HEAD_REPO_FORK} == "true" ]]; then
   echo "Fork detected, saving annotations to an artifact."
