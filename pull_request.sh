@@ -75,4 +75,5 @@ else
     --github-label "${INPUT_LABEL}" \
     "${annotation_argument}" \
     ${INPUT_ARGUMENTS}
+  echo "DEBUG EXIT CODE = $?"
 fi
