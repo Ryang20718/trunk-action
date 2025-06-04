@@ -71,10 +71,7 @@ else
   "${TRUNK_PATH}" check \
     --ci \
     --filter=ruff \
-    --upstream "${upstream}" \
-    --github-commit "${git_commit}" \
-    --github-label "${INPUT_LABEL}" \
-    "${annotation_argument}" \
-    ${INPUT_ARGUMENTS}
+    --upstream "${upstream}"
   echo "DEBUG EXIT CODE = $?"
+  exit 1
 fi
