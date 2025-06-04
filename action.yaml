@@ -80,7 +80,7 @@ inputs:
       your repository will be used with forks as they will will not have permissions to upload
       annotations. By default forks will be auto-detected.
     required: false
-    default: auto
+    default: "false"
 
   post-annotations:
     description:
