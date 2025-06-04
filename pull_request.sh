@@ -70,6 +70,7 @@ if [[ -n ${INPUT_AUTOFIX_AND_PUSH} ]]; then
 else
   "${TRUNK_PATH}" check \
     --ci \
+    --filter=ruff \
     --upstream "${upstream}" \
     --github-commit "${git_commit}" \
     --github-label "${INPUT_LABEL}" \
